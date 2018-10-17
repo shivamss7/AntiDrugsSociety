@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Anti-Drugs Society</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+	<!-- Facebook and Twitter integration -->
+	<!-- <meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content=""  -->
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: block;
+		margin-bottom: 5px!important;
+		float: left;
+		width: 100%;
+	}
+	#colour-variations li a {
+		width: 100%;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+	}
+	#colour-variations li a:hover {
+	  	opacity: .85;
+	}
+	#colour-variations li a > span {
+		width: 33.33%;
+		height: 20px;
+		float: left;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+	
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+
+	.no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+    .se-pre-con {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: url(images/Preloader_3.gif) center no-repeat #fff;
+	}
+	</style>
+	<!-- End demo purposes only -->
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		         <a class="navbar-brand" href="index.html">Anti Drugs Society</a> 
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#" data-nav-section="work"><span>Work</span></a></li>
+		            <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+		            <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/fact-background2.jpg);" data-stellar-background-ratio=".5">
+		<div class="fh5co-overlay"></div>
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-xs-8 col-xs-offset-2">
+						<img src = "images/ads.jpg" style="width: 70%">
+							<h1 class="to-animate"><p>Welcome to The Anti-Drugs Society, India’s first society run by the youth, for youth.</p></h1>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slant"></div>
+	</section>
+
+	<section id="fh5co-intro">
+		<div class="container">
+			<div class="row row-bottom-padded-lg box">
+				<div class="fh5co-block to-animate">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-bulb"></i>
+						<h2>Plan</h2>
+						<p>Our plan is to conduct as many activities as possible to help spread awareness about how drug abuses its victims.</p>
+						<!-- <p><a href="#" class="btn btn-primary" data-nav-section="contact">Get In Touch</a></p> -->
+					</div>
+				</div>
+				<div class="fh5co-block to-animate">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-wrench"></i>
+						<h2>Goals</h2>
+						<p>To make this nation a drug abuse free nation and later on, spread the same vibe all over the world.</p>
+						<!-- <p><a href="#" class="btn btn-primary">Click Me</a></p> -->
+					</div>
+				</div>
+				<div class="fh5co-block to-animate">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-rocket"></i>
+						<h2>Mission</h2>
+						<p>To work for building drug abuse free healthy and happy society and happy faces all over the world.</p>
+						<!-- <p><a href="#" class="btn btn-primary">Why Us?</a></p> -->
+					</div>
+				</div>
+			</div>
+			<div class="row watch-video text-center to-animate">
+				<span>Message from the Founding President</span>
+				<font> When I formed this organization, I had just knocked 20 and was totally unaware as to what I was going to do.<br>
+				 Yes, I was sure of one thing, just one silly thing, that I can risk everything and anything I ever have had for <br>
+				 something which I love to do for the youth and the humankind.<br><br>
+
+                 The organization stands way more than what meets the eyes.<br>
+                 This is more of a revolution which is started by the youth and is destined to spread across the globe.</font>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-work" data-section="work" style="background-image: url(images/fact-background2.jpg);" data-stellar-background-ratio="0.5" >
+	<div class="fh5co-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate fh5co-works">Work</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate fh5co-works">
+							<h3>We at ADS are always organizing seminars, international conferences, guest lectures and campaigns. To know about our latest event, send an e-mail to antidrugssocietyads@gmail.com.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+      
+    	<section id="fh5co-testimonials" data-section="testimonials">
+		<div class="container">
+			<div class="row text-center watch-video to-animate">
+              <span><p style="text-align: justify;">  Registered in the database of United Nations Department of Economic and Social Affairs. <br><br>
+              Only Anti-Drugs Society at college university level in North India.<br><br>
+              The Society is also registered at United Nations Office On Drugs and Crime, Prvention Hub.</p>
+              </span>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-services" data-section="services" style="background-image: url(images/fact-background2.jpg);" data-stellar-background-ratio="0.5" >
+		<div class="fh5co-overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 section-heading text-left">
+						<h2 class=" left-border to-animate fh5co-service">Come Join the Revolution!</h2>
+						<div class="row">
+							<div class="col-md-8 subtext to-animate fh5co-service">
+								<h3><p>We are always looking for members who wish to see a change and want to join from all over the world, if you wish to be a part of this revolution then please send an e-mail to antidrugssocietyads@gmail.com. <br>
+                           	 	It will be lovely to have you aboard. </p></h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+ 
+		<br><br><br><br><br><br><br><br><br><br>
+		<section id="fh5co-intro2">
+		<div class="fh5co-overlay"></div>
+		<div class="container">
+			<div class="row watch-video text-center to-animate">
+				<span>Message from the Secretary</span>
+				<font> <p style="text-align: justify;">
+				 Growing drug abuse menace has plagued health and happiness of human beings. It is imperative to embark on the holistic approach to teach present and potential drug abusers the art of staying free from the curse of addiction and to enjoy dignified and productive lives. It requires robust and coordinated efforts from different sections of the society across regions and nations.There is imminent need of educating and enabling youths to reject illegal drugs and also of preventing youths from initiating the use of drugs convincing occasional drug users to stop. Let's optimally use UNDOC ‘Listen first' initiative for prevention of drug abuse as addiction obstructs sustainable development and peace in societies.
+				 </p></font>    
+                </div>
+		</div>
+	</section>
+
+
+	
+	<section id="fh5co-counters" style="background-image: url(images/fact-background.jpg); " data-stellar-background-ratio="0.5">
+		<div class="fh5co-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center to-animate">
+					<h2>Fun Facts</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-globe to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="52237" data-speed="5000" data-refresh-interval="50">52237</span>
+						<span class="fh5co-counter-label">Impact area (Sq. km)</span>
+					</div>
+				</div>
+				
+		        <div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-people to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="1503" data-speed="5000" data-refresh-interval="50">1503</span>
+						<span class="fh5co-counter-label">Members Registered</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-people to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="1574321" data-speed="5000" data-refresh-interval="50">1574321</span>
+						<span class="fh5co-counter-label">More members to go</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-cup to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="237" data-speed="5000" data-refresh-interval="50">237</span>
+						<span class="fh5co-counter-label">Cups of Chai !</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section id="fh5co-about" data-section="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">About</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Our Hardworking Proffesionals behind the scene.</h3>
+						</div>
+					</div>
+				</div>
+			</div >
+
+			<div class="row photos" > 
+			<span><img  class="col-xs-12 col-md-6" src = "images/nishant.jpg"></span>
+			<span><img  class="col-xs-12 col-md-6" src = "images/nikhil.jpg"></span>
+			</div>
+
+			<br><br><br><br>
+			<div class="row box">
+				<div class="col-md-6 obx">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/nishant2.jpg" alt="Image"></figure>
+						<h3>Nishant Surroch</h3>
+						<span class="fh5co-position">Founding President</span>
+						<p style="text-align: justify;">
+						Nishant is an undergraduate student at one of the top colleges in India in Delhi University, pursuing his childhood love in the shape of Geography.Besides being meticulous in academics, he has authored a novel, won umpteen medals in athletics, was the best athlete and sports captain, has attained Brown belt in Karate(Goju-Ryu), has played Zonal football and also is a part of current college football team, and also a state level dancer​.​His lifestyle exemplifies how one can off set his/her energy in doing constructive things without caring about the​ tempting ills the world has to offer​.</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.linkedin.com/today/author/0_0F5pUz12icxETRxSn3MW1t?trk=mp-reader-h"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/nishant.surroch.1?fref=ts"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.instagram.com/nishant_surroch/"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/nikhil2.jpg" alt="Image"></figure>
+						<h3>Nikhil</h3>
+						<span class="fh5co-position">Secretary</span>
+						<p style="text-align: justify;">
+						Nikhil is a mechanical engineer who is currently pursuing Master in Management in one of the best business schools in the world named IE Business School.
+						He embodies the word All-rounder wholeheartedly as he is a Black belt in Karate, has represented his state in cricket and was captain of university football team. Besides sports, he also was part of the team that made the car for Baja SAE USA(off-road vehicle competition) and his team was ranked 4th in Asia. He managed these diverse domains keeping drugs and the like at bay throughout.</p>
+						<ul class="social social-circle">
+							<li><a href="https://in.linkedin.com/in/nikhil-surroch-9a4036109"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/nikhil.surroch"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.instagram.com/nikhilsurroch/"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/bhawna.jpg" alt="Image"></figure>
+						<h3>Bhawna</h3>
+						<span class="fh5co-position">Vice President</span>
+						<p style="text-align: justify;">
+						Bhawna is a graduate of Gargi college, one of India's finest college for women. Her qualities are that of a true leader. 
+						Apart from that, she has entrepreneurship in every strand of her dna and her attitude reflects that.
+						Apart from this, she is also a sports person , an air wing ncc cadet and winner of    Outstanding student award (2015-2018)  of her college.  
+						All these qualities not only make her a well balanced millennial, but also a person who wants to walk out of this world leaving it a better place.</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</section>
+
+<section id="fh5co-work" data-section="About the Organization" style="background-image: url(images/fact-background2.jpg);" data-stellar-background-ratio="0.5" >
+	<div class="fh5co-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate fh5co-works">About the Organization</h2>
+					<div class="row">
+						<div class="subtext to-animate fh5co-works">
+							<h3 >
+							<p style="text-align: justify;">
+							The organization was founded in May 2017 by a group of young, enthusiastic and optimistic students who wished to see a change in the world. After that, the organization has skyrocketed through its works. We knew that it is going to be no walk on the cake for us to establish this society because there were no models of established society to be followed. Connections had to be made from scratch, members were to be selected and people to be made aware of its existence through its work and word of mouth. The very reason for the existence of this society is in its name "Anti-Drugs Society". The Society has received a very warm response from people from all over the Sub-Continent. This is what keeps us going all the time.<br><br>
+ 
+							The society has the privilege to be an integral part of the database of United Nations Department of Economic and Social Affairs.
+							The Society is also registered at United Nations Office on Drugs and Crime(UNDOC) prevention Hub.
+							Narcotics Control Bureau (NCB) is committed to providing its expert guidance through the interaction of its senior functionaries with the members of the society. NCB, a Central Authority of Ministry of Home Affairs-Government of India is a nodal drug law enforcement and intelligence agency of India responsible for fighting drug trafficking and abuse of illegal substances.
+							It has the unique distinction of being the only Anti-Drugs Society in India tackling the issue in universities/colleges on a large scale.<br><br>
+							The society has the privilege of appointing delegates for the United Nations conferences, seminars, workshops and meetings. Only the member of this society has the authority of representing society at aforementioned events.</p></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> 
+
+	<section id="fh5co-contact" data-section="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Get In Touch</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Don't hesitate, ask us anything!</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-6 to-animate">
+					<h3>Contact Info</h3>
+					<ul class="fh5co-contact-info">
+						<li class="fh5co-contact-address ">
+							<i class="icon-home"></i>
+							Dwarka Sector-1, Delhi
+						</li>
+						<li><i class="icon-phone"></i>+91-8826111789</li>
+						<li><i class="icon-envelope"></i>antidrugssocietyads@gmail.com</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>&copy; Anti-Drugs Society All Rights Reserved. </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<!-- <li><a href="#"><i class="icon-twitter"></i></a></li> -->
+						<li><a href="https://www.facebook.com/sad.sbsc/?fref=ts"><i class="icon-facebook"></i></a></li>
+						<!-- <li><a href="#"><i class="icon-youtube"></i></a></li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!-- jQuery Visible -->
+	<script src="js/jquery.visible.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Counter -->
+	<script src="js/jquery.countTo.min.js"></script>
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+	<div class="se-pre-con"></div>
+</html>
+
